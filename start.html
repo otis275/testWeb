@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS -->
+<!-- <style>
+    body {background-color: powderblue;}
+    h1 {color:black}
+    p {
+        color:rgb(103, 141, 66); 
+        border: 0mm;
+        /* padding use to space between elements */
+        padding: 50px;
+        margin: 60px 
+    }
+    
+</style>
+    <link rel ="stylesheet" href = "styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+<!-- <style>
+    body{
+        background-image: url('Profile.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style> -->
+    <!-- TRANG TRÍ THANH TAB -->
+    <title>First Web of Otis</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    
+<style>
+    body {
+        background-image: url(Master.webp);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        border: solid 20px red;
+    }
+    table, td, th {
+        border: 3px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        background-color: aquamarine;
+    }
+    ul {
+        width: 100%;
+        overflow: hidden;
+        background-color: rgb(70, 67, 67);
+        list-style-type: none;
+        margin: 2;
+        /* align-items: center;
+        justify-content: space-between;
+        display: flex; */
+    }
+    li {
+        float:left
+    }
+    li a{
+        font-size: 200%;
+        display:block;
+        color: white;
+        text-align: center;
+        padding: 50px;
+        text-decoration: none;
+
+    }
+    li a:hover {
+        background-color: rgb(145, 33, 33);
+        
+    }
+    .mycontainer {
+        width:100%;
+        overflow:auto;
+    }
+    .mycontainer div {
+    width:33%;  
+    float:left;
+    }
+    .test_div {
+        background-color: aquamarine;
+    }
+    .test_div div {
+        background-color: aqua;
+    }
+    .test_div div div {
+        background-color: blueviolet;
+    }
+    
+</style>
+</head>
+
+<body>
+
+
+ <!-- <hr>:Tạo gạch ngang trang -->
+<ul>
+    <li> <a href="#Home">Home</a></li>
+    <li> <a href = "#Applications">Appications</a></li>
+    <li> <a href="#Introduction">Introduction</a></li>
+</ul>
+<br>
+<h2 title="Name of creator"> Le trung thanh dat1</h2>
+<h3> 23120228</h3>
+<!-- <hr>
+<mark> </mark>: Highlight -->
+<p> <b>This is a line break paragraph.</b></p>
+<p>This is <mark>another paragraph</mark>. That may be long because of some test so dont feel strange kkk</p>
+<button onclick="somejavaScript" >This is button click to link</button>
+<br>
+<a href="https://www.w3schools.com" target="_self">
+    <img src = "Profile.jpg" alt="W3Schools.com" title = "This is Dat" style="width: 180px; height: 200px;">
+    <figcaption>My Profile Picture</figcaption>
+
+</a>
+<!-- <abbr></abbr>: Thêm thông tin khi di chuột vào -->
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+<table style="width: 100%;">
+    <caption>
+        <span id="Introduction"; style="background-color: cyan">
+            This is my first table
+        </span>
+    </caption>
+    <tr style="height: 50px;">
+        <th style="width: 50%;">Name</th>
+        <th>Student ID</th>
+        <th>Contributions</th>
+    </tr>
+    <tr>
+        <td>Le Trung Thanh Dat</td>
+        <td> 23120228</td>
+        <td>100%</td>
+    </tr>
+    <tr>
+        <td>Tran Vu Dinh Chinh</td>
+        <td> 23120220</td>
+        <td>100%</td>
+    </tr>
+</table>
+<br>
+<div class="test_div">
+    <p>HEllo</p>
+    <div>
+      <h2>London</h2>
+      <p>London is the capital city of England.</p>
+      <p>London has over 9 million inhabitants.</p>
+      <div>
+        <p>test sth</p>
+      </div>
+    </div>
+ 
+</div>
+<iframe src = "favicon.ico" name="nameIframe" height ="100px" width="50%" title="iframe exp"> </iframe>
+<br>
+<a href="https://www.w3schools.com" target="nameIframe">link lead to W3school</a>
+<h1 id="Applications">Test id<h1>
+<br>
+<button onclick="Function()">click me</button>
+<script>
+    function Function() {
+        document.getElementById("testJS").innerHTML = "I am learning both HTML&JS!";
+        document.getElementById("testJS").style.backgroundColor = "blue";
+        document.getElementById("testJS").style.frontSize = "25px";
+        document.getElementById("testJS").style.color = "red";
+    }
+</script>
+
+<p id ="testJS">Hello JS</p>
+<form>
+    <label for="Ho">Họ</label><br>
+    <input type="text" id="Ho" name="Họ"><br>
+    <input type="submit">
+</form>
+<!-- value và name bắt buộc phải có trong radio form
+ fav_language=JavaScript sẽ được gửi cho máy chủ
+ còn với text thì không cần value vì value sẽ là cái mình nhập -->
+<form action="In4.txt">
+    <input type="radio" id="html" value="HTML" name="fav">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="js" value="JavaScripts" name="fav">
+    <label for="js">JavaScripts</label><br>
+    <input type="radio" id="css" value="CSS"name="fav" >
+    <label for="css">CSS</label><br>
+    <input type="submit">
+</form>
+<br>
+<p id="testJS1"></p>
+
+<script>
+    let x = `thanh dat`
+    document.getElementById("testJS1").innerHTML = "This line will show result of JS code: " + x
+    let x1 = x.toLocaleUpperCase();
+</script>
+<p>Activate debugging in your browser (Chrome, IE, Firefox) with F12, and select "Console" in the debugger menu.</p>
+
+
+</body>
+</html>
